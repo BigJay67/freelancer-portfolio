@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Makinde James | Freelancer Portfolio</title>
+      <link rel="stylesheet" href="style.css" />
+      <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <button id="themeToggle">🌙 Toggle Theme</button>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-logo">Makinde<span>James</span></h1>
+                <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+                </div>
+            </div>
+        </nav>
+
+
+      <header class="hero">
+        <div class="hero-content">
+          <h1 class="fade-in">Hi, I'm <span class="highlight">Makinde James</span></h1>
+          <p class="fade-in delay">Creative Designer & Frontend Developer</p>
+          <a href="#about" class="btn fade-in delay2">Explore My Work</a>
+        </div>
+      </header>
+
+      <section id="about" class="section about-section scroll-animate">
+        <div class="container">
+          <div class="profile-img">
+            <img src="images/profile.jpeg" alt="profile">
+          </div>
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p>I'm a passionate creative with 2+ years experience in brand design, UI/UX, and frontend web development. I help brands stand out with bold, memorable, and user-centered designs.</p>
+            <p>Let's build something extraordinary together.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section services-section scroll-animate">
+        <div class="section-title">
+          <h2>What I Do</h2>
+          <p>High-impact services designed to elevate your brand</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card fade-in">
+            <img src="images/website_design_icon.png" alt="Web Design">
+            <h3>Website Design</h3>
+            <p>Custom, responsive websites that convert visitors to clients.</p>
+            <span class="price">$500+</span>
+          </div>
+          <div class="service-card fade-in delay">
+            <img src="images/brand_identity_icon.png" alt="Branding">
+            <h3>Brand Identity</h3>
+            <p>From logos to brand voice - stand out with consistency.</p>
+            <span class="price">$300+</span>
+          </div>
+          <div class="service-card fade-in delay2">
+            <img src="images/uiux_design_icon.png" alt="UI/UX">
+            <h3>UI/UX Design</h3>
+            <p>Intuitive, beautiful designs that create real user delight.</p>
+            <span class="price">$400+</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section portfolio-section scroll-animate">
+        <div class="section-title">
+          <h2>My Work</h2>
+          <p>Here are some recent projects I've designed and developed.</p>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-item fade-in">
+            <img src="images/barber-site.png" alt="Barbershop Website">
+            <div class="portfolio-info">
+              <h3>Barbershop Website</h3>
+              <p>Built with HTML, CSS, and JavaScript.</p>
+            </div>
+          </div>
+          <div class="portfolio-item fade-in delay">
+            <img src="images/clothing-brand.png" alt="Brand Identity">
+            <div class="portfolio-info">
+              <h3>Fashion Brand Kit</h3>
+              <p>Logo & color system for fashion brand.</p>
+            </div>
+          </div>
+          <div class="portfolio-item fade-in delay2">
+            <img src="images/finance-app.png" alt="Mobile App UI">
+            <div class="portfolio-info">
+              <h3>Finance App UI</h3>
+              <p>Mobile-first user interface design.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="section testimonial-section">
+        <div class="section-title">
+          <h2>Client Testimonials</h2>
+          <p>What clients say about working with me</p>
+        </div>
+        <div class="testimonial-slider">
+          <div class="testimonial active">“Amazing work, very professional and great results!” – Sarah M.</div>
+          <div class="testimonial">“He brought my brand to life! Highly recommended.” – Daniel K.</div>
+          <div class="testimonial">“Creative, on-time, and a joy to work with!” – Amina L.</div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section scroll-animate">
+        <div class="section-title">
+          <h2>Let's Work Together</h2>
+          <p>Have a project in mind? Drop a message!</p>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <p id="formStatus" class="form-status"></p>
+      </section>
+      
+      <footer class="footer">
+        <div class="footer-content">
+          <p>© 2025 Makinde James. All rights reserved.</p>
+        </div>
+      </footer>
+
+
+      <script src="script.js"></script>
+    </body>
+  </html>
