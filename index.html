@@ -85,6 +85,13 @@
       <symbol id="arrow-down" viewBox="0 0 24 24">
         <path d="M12 4v16m-7-7 7 7 7-7" />
       </symbol>
+      <symbol id="arrow-up" viewBox="0 0 24 24">
+        <path d="M12 20V4m-7 7 7-7 7 7" />
+      </symbol>
+      <symbol id="copy" viewBox="0 0 24 24">
+        <rect x="8" y="8" width="12" height="12" rx="2" />
+        <path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3" />
+      </symbol>
       <symbol id="arrow-right" viewBox="0 0 24 24">
         <path d="M4 12h16m-7-7 7 7-7 7" />
       </symbol>
@@ -101,7 +108,9 @@
     <header class="site-header">
       <div class="container nav-container">
         <a class="brand" href="#home" aria-label="Makinde James, home"
-          ><span class="brand-mark">mj<span>✳</span></span
+          ><span class="brand-mark"
+            >mj<svg class="brand-spark" aria-hidden="true" focusable="false">
+              <use href="#spark" /></svg></span
           ><span class="brand-name"
             >Makinde<br />James<span class="brand-period">.</span></span
           ></a
@@ -134,7 +143,11 @@
       >
         <a href="#work">Selected work <span>04</span></a
         ><a href="#about">About me</a><a href="#approach">My approach</a
-        ><a href="#contact">Let’s talk <span>↗</span></a>
+        ><a href="#contact"
+          >Let’s talk
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="#arrow-up-right" /></svg
+        ></a>
       </nav>
     </header>
 
@@ -185,8 +198,8 @@
                 ><svg class="icon"><use href="#arrow-up-right" /></svg>
               </div>
               <img
-                src="images/projects/homebase-small.webp"
-                alt="HomeBase accommodation platform"
+                src="images/projects/homebase-spaces-small.webp"
+                alt="HomeBase accommodation platform with colorful stay categories"
                 width="840"
                 height="495"
                 fetchpriority="high"
@@ -218,8 +231,11 @@
         </div>
         <div class="hero-bottom">
           <a href="#work" class="eyebrow scroll-prompt"
-            ><span class="scroll-icon" aria-hidden="true">↓</span> A few things
-            I’ve built</a
+            ><span class="scroll-icon" aria-hidden="true"
+              ><svg class="icon" focusable="false">
+                <use href="#arrow-down" /></svg
+            ></span>
+            A few things I’ve built</a
           ><span class="eyebrow"
             >A little design sense. A lot of curiosity.</span
           >
@@ -381,13 +397,13 @@
                   ><span>home-base-project.vercel.app</span>
                 </div>
                 <img
-                  src="images/projects/homebase.webp"
+                  src="images/projects/homebase-spaces.webp"
                   srcset="
-                    images/projects/homebase-small.webp  840w,
-                    images/projects/homebase.webp       1440w
+                    images/projects/homebase-spaces-small.webp  840w,
+                    images/projects/homebase-spaces.webp       1440w
                   "
                   sizes="(max-width: 760px) 90vw, 42vw"
-                  alt="HomeBase: a refined accommodation platform with the headline Find your perfect space"
+                  alt="HomeBase: Space to settle in, Room to explore, with categories for all spaces, apartments, and hostels"
                   width="1440"
                   height="848"
                   loading="lazy"
@@ -519,7 +535,12 @@
                 <span class="counter-label">SMALL STARTS. REAL PROGRESS.</span
                 ><span class="counter-number">0<span>1</span></span>
                 <div class="counter-controls">
-                  <span>+ Increment</span><span>Save count ↗</span>
+                  <span>+ Increment</span
+                  ><span
+                    >Save count
+                    <svg class="icon" focusable="false">
+                      <use href="#arrow-up-right" /></svg
+                  ></span>
                 </div>
                 <span class="counter-note"
                   >A study in making the small things work.</span
@@ -747,7 +768,12 @@
             </div>
             <div class="contact-options">
               <button class="copy-email" type="button">
-                <span class="copy-icon" aria-hidden="true">⧉</span
+                <svg
+                  class="copy-icon icon"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use href="#copy" /></svg
                 ><span class="copy-label">Copy email</span></button
               ><a
                 href="https://wa.me/2348127098777"
@@ -764,27 +790,43 @@
     </main>
     <footer class="site-footer">
       <div class="container footer-layout">
-        <a class="footer-name" href="#home">Makinde James<span>✳</span></a>
+        <a class="footer-name" href="#home"
+          >Makinde James<svg
+            class="footer-spark"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="#spark" /></svg
+        ></a>
         <p>© <span id="year">2026</span> · Made with intention.</p>
         <div class="social-links">
           <a
             href="https://github.com/BigJay67"
             target="_blank"
             rel="noopener noreferrer"
-            >GitHub ↗</a
+            >GitHub
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="#arrow-up-right" /></svg></a
           ><a
             href="https://www.linkedin.com/in/james-makinde-7039a937a"
             target="_blank"
             rel="noopener noreferrer"
-            >LinkedIn ↗</a
+            >LinkedIn
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="#arrow-up-right" /></svg></a
           ><a
             href="https://twitter.com/bigjayonx"
             target="_blank"
             rel="noopener noreferrer"
-            >X ↗</a
-          >
+            >X
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="#arrow-up-right" /></svg
+          ></a>
         </div>
-        <a class="back-top" href="#home" aria-label="Back to top">↑</a>
+        <a class="back-top" href="#home" aria-label="Back to top"
+          ><svg class="icon" aria-hidden="true" focusable="false">
+            <use href="#arrow-up" /></svg
+        ></a>
       </div>
     </footer>
     <dialog

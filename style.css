@@ -167,13 +167,14 @@ svg {
   line-height: 1;
   padding-right: 13px;
 }
-.brand-mark > span {
+.brand-spark {
   position: absolute;
-  font-size: 21px;
+  width: 21px;
+  height: 21px;
+  stroke-width: 6;
   right: 0;
   top: -5px;
   color: #739948;
-  letter-spacing: 0;
 }
 .brand-name {
   font-size: 11px;
@@ -818,6 +819,9 @@ h2 {
   gap: 7px;
 }
 .counter-controls span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   background: #53617a;
   color: #fff;
   padding: 8px 16px;
@@ -828,6 +832,10 @@ h2 {
   color: #53617a;
   background: transparent;
   border: 1px solid #b5bece;
+}
+.counter-controls .icon {
+  width: 10px;
+  height: 10px;
 }
 .counter-note {
   font-size: 9px;
@@ -1132,8 +1140,8 @@ h2 {
   padding: 5px 0;
 }
 .copy-icon {
-  font-size: 18px;
-  line-height: 1;
+  width: 16px;
+  height: 16px;
 }
 .contact-options > a:hover,
 .copy-email:hover {
@@ -1157,9 +1165,10 @@ h2 {
   align-items: center;
   gap: 9px;
 }
-.footer-name > span {
-  font-size: 20px;
-  font-weight: 400;
+.footer-spark {
+  width: 20px;
+  height: 20px;
+  stroke-width: 6;
   color: #7d9658;
 }
 .site-footer p {
@@ -1174,6 +1183,15 @@ h2 {
 .social-links a:hover {
   color: #638137;
 }
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.social-links .icon {
+  width: 11px;
+  height: 11px;
+}
 .back-top {
   border: 1px solid #c9cfbe;
   border-radius: 50%;
@@ -1185,6 +1203,11 @@ h2 {
 }
 .back-top:hover {
   background: var(--lime);
+}
+.back-top .icon,
+.scroll-icon .icon {
+  width: 14px;
+  height: 14px;
 }
 /* Project notes */
 .project-dialog {
@@ -1573,8 +1596,9 @@ h2 {
   .brand-mark {
     font-size: 36px;
   }
-  .brand-mark > span {
-    font-size: 18px;
+  .brand-spark {
+    width: 18px;
+    height: 18px;
   }
   .brand-name {
     font-size: 10px;

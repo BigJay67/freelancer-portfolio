@@ -146,7 +146,15 @@ function appendExternalLink(container, href, label, primary = false) {
   link.target = "_blank";
   link.rel = "noopener noreferrer";
   link.className = primary ? "button button-dark" : "text-link";
-  link.textContent = `${label} ↗`;
+  link.textContent = label;
+  const icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  icon.classList.add("icon");
+  icon.setAttribute("aria-hidden", "true");
+  icon.setAttribute("focusable", "false");
+  const arrow = document.createElementNS("http://www.w3.org/2000/svg", "use");
+  arrow.setAttribute("href", "#arrow-up-right");
+  icon.append(arrow);
+  link.append(icon);
   container.append(link);
 }
 function openProject(key, trigger) {
