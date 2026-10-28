@@ -1,160 +1,820 @@
-<!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <title>Makinde James | Portfolio</title>
-      <link rel="stylesheet" href="style.css" />
-      <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
-    </head>
-    <body>
-      <button id="themeToggle">🌙 Toggle Theme</button>
-        <nav class="navbar">
-            <div class="nav-container">
-                <h1 class="nav-logo">Makinde<span>James</span></h1>
-                <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                <span></span><span></span><span></span>
-                </div>
-            </div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f3ed" />
+    <meta
+      name="description"
+      content="Makinde James is a software developer building thoughtful websites and full-stack web applications. Explore FlowBase, HomeBase, Mama Put, and more."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Makinde James — Software Developer" />
+    <meta
+      property="og:description"
+      content="Thoughtful interfaces. Useful software. Selected web and full-stack projects by Makinde James."
+    />
+    <meta name="twitter:card" content="summary" />
+    <title>Makinde James — Software Developer</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;450;500;550;600;650;700;750;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <noscript
+      ><style>
+        .project-toolbar,
+        .detail-button,
+        .menu-toggle,
+        .copy-email {
+          display: none;
+        }
+        @media (max-width: 760px) {
+          .mobile-nav[hidden] {
+            display: flex;
+            position: static;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 12px 20px;
+            border-bottom: 1px solid #dcded3;
+          }
+          .mobile-nav a {
+            font-size: 11px;
+            padding: 4px 0;
+          }
+          .mobile-nav a span {
+            display: none;
+          }
+        }
+      </style></noscript
+    >
+    <script src="script.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Makinde James",
+        "jobTitle": "Software Developer",
+        "email": "mailto:makindejames5@gmail.com",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Osun State University"
+        },
+        "sameAs": [
+          "https://github.com/BigJay67",
+          "https://www.linkedin.com/in/james-makinde-7039a937a",
+          "https://twitter.com/bigjayonx"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <svg
+      class="icon-definitions"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <symbol id="arrow-up-right" viewBox="0 0 24 24">
+        <path d="M5 19 19 5M5 5h14v14" />
+      </symbol>
+      <symbol id="arrow-down" viewBox="0 0 24 24">
+        <path d="M12 4v16m-7-7 7 7 7-7" />
+      </symbol>
+      <symbol id="arrow-right" viewBox="0 0 24 24">
+        <path d="M4 12h16m-7-7 7 7-7 7" />
+      </symbol>
+      <symbol id="github" viewBox="0 0 24 24">
+        <path
+          d="M9 19c-4.3 1.3-4.3-2.2-6-2.7M15 22v-3.4a3 3 0 0 0-.8-2.3c2.8-.3 5.8-1.4 5.8-6.4a5 5 0 0 0-1.4-3.5 4.6 4.6 0 0 0-.1-3.4s-1.1-.3-3.6 1.3a12.3 12.3 0 0 0-6.5 0C5.9 2.7 4.8 3 4.8 3a4.6 4.6 0 0 0-.1 3.4 5 5 0 0 0-1.4 3.5c0 5 3 6.1 5.8 6.4a3 3 0 0 0-.8 2.3V22"
+        />
+      </symbol>
+      <symbol id="spark" viewBox="0 0 80 80">
+        <path d="M40 0v80M0 40h80M11.7 11.7l56.6 56.6M11.7 68.3l56.6-56.6" />
+      </symbol>
+    </svg>
+
+    <header class="site-header">
+      <div class="container nav-container">
+        <a class="brand" href="#home" aria-label="Makinde James, home"
+          ><span class="brand-mark">mj<span>✳</span></span
+          ><span class="brand-name"
+            >Makinde<br />James<span class="brand-period">.</span></span
+          ></a
+        >
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#work" data-nav="work"
+            >Work <span class="nav-count">04</span></a
+          >
+          <a href="#about" data-nav="about">About</a>
+          <a href="#approach" data-nav="approach">Approach</a>
         </nav>
+        <a class="nav-contact" href="#contact"
+          >Let’s talk <svg class="icon"><use href="#arrow-up-right" /></svg
+        ></a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+      <nav
+        class="mobile-nav"
+        id="mobile-nav"
+        aria-label="Mobile navigation"
+        hidden
+      >
+        <a href="#work">Selected work <span>04</span></a
+        ><a href="#about">About me</a><a href="#approach">My approach</a
+        ><a href="#contact">Let’s talk <span>↗</span></a>
+      </nav>
+    </header>
 
-
-      <header class="hero">
-        <div class="hero-content">
-          <h1 class="fade-in">Hi, I'm <span class="highlight">Makinde James</span></h1>
-          <p class="fade-in delay">Software Engineering Graduate | Frontend Developer</p>
-          <a href="#about" class="btn fade-in delay2">Explore My Work</a>
+    <main id="main">
+      <section class="hero container" id="home" aria-labelledby="hero-heading">
+        <div class="hero-topline">
+          <p class="eyebrow">
+            <span class="status-dot"></span> Independent software developer
+          </p>
+          <span class="eyebrow hero-location"
+            >Based in Nigeria · Building for the web</span
+          >
         </div>
-      </header>
-
-      <section id="about" class="section about-section scroll-animate">
-        <div class="container">
-          <div class="profile-img">
-            <img src="images/profile.jpeg" alt="Makinde James">
-          </div>
-          <div class="about-text">
-            <h2>About Me</h2>
-            <p>
-              I'm Makinde James, a Software Engineering graduate from Osun State University (UNIOSUN) with a Frontend Development certificate and solid knowledge of Python. I have over 2 years of hands-on experience designing and building websites, with a strong focus on creating clean, modern, and functional web experiences — often using AI tools to speed up the process.
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <h1 id="hero-heading">
+              Thoughtful<br />interfaces.<br /><span class="serif-word"
+                >Useful</span
+              >
+              software<span class="lime-period">.</span>
+            </h1>
+            <p class="hero-intro">
+              I’m James. I turn ideas into websites and web apps that look good,
+              feel right, and work hard.
             </p>
-            <p>
-              I enjoy turning ideas into real websites that are fast, responsive, and easy to use. Whether it's a simple restaurant site or a full-stack platform, I focus on writing clean code and delivering results that work in the real world.
-            </p>
-            <p>
-              Let's build something great together.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="section services-section scroll-animate">
-        <div class="section-title">
-          <h2>What I Do</h2>
-          <p>High-impact services designed to elevate your brand</p>
-        </div>
-        <div class="services-grid">
-          <div class="service-card fade-in">
-            <img src="images/website_design_icon.png" alt="Web Design">
-            <h3>Website Design</h3>
-            <p>Custom, responsive websites that convert visitors to clients.</p>
-          </div>
-          <div class="service-card fade-in delay2">
-            <img src="images/uiux_design_icon.png" alt="UI/UX">
-            <h3>UI/UX Design</h3>
-            <p>Intuitive, beautiful designs that create real user delight.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="portfolio" class="section portfolio-section scroll-animate">
-        <div class="section-title">
-          <h2>My Work</h2>
-          <p>Selected projects that showcase my skills in web design and full-stack development.</p>
-        </div>
-
-        <div class="portfolio-grid">
-
-          <!-- Project 1: Mama Put -->
-          <div class="portfolio-item fade-in">
-            <img src="images/mama-put.png" alt="Mama Put Restaurant Website">
-            <div class="portfolio-info">
-              <h3>Mama Put — Nigerian Buka-Style Restaurant</h3>
-              <p>
-                A concept website designed to capture the authentic feel of Lagos street-food bukas. Built with a bold color palette inspired by real buka signage, a day-aware "Today's Pot" menu widget, and a clean structure that mirrors the real customer journey. Fully responsive, accessible, and built with pure HTML, CSS, and vanilla JavaScript.
-              </p>
-              <p><strong>Tech:</strong> HTML5, CSS3, Vanilla JS, Google Fonts</p>
-              <a href="https://bigjay67.github.io/mama-put" target="_blank" class="btn" style="display:inline-block; margin-top:10px; padding:8px 16px; font-size:0.9rem;">View Live Site</a>
+            <div class="hero-actions">
+              <a class="button button-dark" href="#work"
+                >Explore my work
+                <svg class="icon"><use href="#arrow-down" /></svg></a
+              ><a class="text-link" href="mailto:makindejames5@gmail.com"
+                >Get in touch
+                <svg class="icon"><use href="#arrow-up-right" /></svg
+              ></a>
             </div>
           </div>
-
-          <!-- Project 2: HomeBase -->
-          <div class="portfolio-item fade-in delay">
-            <img src="images/homebase.png" alt="HomeBase Rental Platform">
-            <div class="portfolio-info">
-              <h3>HomeBase — Full Stack Rental Platform</h3>
-              <p>
-                A full-stack accommodation platform connecting hosts and renters across Nigeria. Features include Firebase authentication, property listings with Cloudinary uploads, Paystack payments, real-time messaging with Socket.IO, booking management, and an admin dashboard. Built from scratch and actively improved.
-              </p>
-              <p><strong>Tech:</strong> React, Node.js, Express, MongoDB, Firebase, Paystack, Cloudinary, Socket.IO</p>
-              <a href="https://home-base-project.vercel.app" target="_blank" class="btn" style="display:inline-block; margin-top:10px; padding:8px 16px; font-size:0.9rem;">View Live Site</a>
+          <div
+            class="hero-art"
+            aria-label="A glimpse of my work: FlowBase and HomeBase"
+          >
+            <div class="art-grid" aria-hidden="true"></div>
+            <span class="art-coordinate" aria-hidden="true"
+              >IDEA → INTERFACE → EXPERIENCE</span
+            >
+            <div class="art-window window-homebase">
+              <div class="window-bar">
+                <span class="window-dots"><i></i><i></i><i></i></span
+                ><span>homebase / a place to belong</span
+                ><svg class="icon"><use href="#arrow-up-right" /></svg>
+              </div>
+              <img
+                src="images/projects/homebase-small.webp"
+                alt="HomeBase accommodation platform"
+                width="840"
+                height="495"
+                fetchpriority="high"
+              />
+            </div>
+            <div class="art-window window-flowbase">
+              <div class="window-bar">
+                <span class="window-dots"><i></i><i></i><i></i></span
+                ><span>flowbase / built to bring work together</span
+                ><svg class="icon"><use href="#arrow-up-right" /></svg>
+              </div>
+              <img
+                src="images/projects/flowbase-small.webp"
+                alt="FlowBase project management application"
+                width="840"
+                height="495"
+                fetchpriority="high"
+              />
+            </div>
+            <span class="art-sticker" aria-hidden="true"
+              ><svg><use href="#spark" /></svg
+            ></span>
+            <div class="art-caption">
+              <span class="status-dot"></span
+              ><span>Real projects. Built from scratch.</span
+              ><span class="caption-plus" aria-hidden="true">+</span>
             </div>
           </div>
-
         </div>
-        <!-- Project: FlowBase -->
-        <div class="portfolio-item fade-in">
-          <img src="images/flowbase.png" alt="FlowBase SaaS Platform">
-          <div class="portfolio-info">
-            <h3>FlowBase — Multi-Tenant Project Management SaaS</h3>
-            <p>
-              A Linear/Asana-style team project management tool built end-to-end.
-              Multi-tenant workspaces with role-based permissions (Owner/Admin/Member),
-              drag-and-drop Kanban boards, task comments, activity logs, team chat,
-              and full Stripe subscription billing (Checkout, webhooks, Customer Portal).
-              Every database query is scoped by organization for true tenant isolation.
+        <div class="hero-bottom">
+          <a href="#work" class="eyebrow scroll-prompt"
+            ><span class="scroll-icon" aria-hidden="true">↓</span> A few things
+            I’ve built</a
+          ><span class="eyebrow"
+            >A little design sense. A lot of curiosity.</span
+          >
+        </div>
+      </section>
+
+      <div class="stack-strip" aria-label="My core technologies">
+        <div class="container stack-inner">
+          <span class="eyebrow">Ideas, meet my toolkit</span>
+          <div class="stack-list">
+            <span>React</span><span>Next.js</span><span>TypeScript</span
+            ><span>Node.js</span><span>PostgreSQL</span><span>MongoDB</span
+            ><span>Python</span>
+          </div>
+          <svg class="stack-spark" aria-hidden="true">
+            <use href="#spark" />
+          </svg>
+        </div>
+      </div>
+
+      <section
+        class="work-section section-pad container"
+        id="work"
+        aria-labelledby="work-heading"
+      >
+        <div class="section-top">
+          <p class="eyebrow section-index">01 / Selected work</p>
+          <span class="eyebrow muted">Made with care. Built to be used.</span>
+        </div>
+        <div class="section-heading-row">
+          <h2 id="work-heading">
+            Less talk.<br /><span class="serif-word">More building.</span>
+          </h2>
+          <p>
+            A few projects from idea to implementation.<br />Different
+            challenges. The same attention to detail.
+          </p>
+        </div>
+        <div class="project-toolbar">
+          <div
+            class="project-filters"
+            role="group"
+            aria-label="Filter projects"
+          >
+            <button
+              class="filter-button active"
+              type="button"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              All work <span>04</span></button
+            ><button
+              class="filter-button"
+              type="button"
+              data-filter="full-stack"
+              aria-pressed="false"
+            >
+              Full-stack</button
+            ><button
+              class="filter-button"
+              type="button"
+              data-filter="frontend"
+              aria-pressed="false"
+            >
+              Frontend
+            </button>
+          </div>
+          <span class="eyebrow project-result" role="status" aria-live="polite"
+            >Showing 4 projects</span
+          >
+        </div>
+        <div class="projects-grid">
+          <article
+            class="project-card project-flowbase"
+            data-category="full-stack"
+            id="flowbase"
+          >
+            <a
+              class="project-visual visual-flowbase"
+              href="https://flowbase-xyz.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit the FlowBase website (opens in a new tab)"
+              ><div class="visual-top">
+                <span>01 / FlowBase</span><span>SaaS / Productivity</span>
+              </div>
+              <div class="project-browser">
+                <div class="project-browser-bar">
+                  <span class="window-dots"><i></i><i></i><i></i></span
+                  ><span>flowbase-xyz.vercel.app</span>
+                </div>
+                <img
+                  src="images/projects/flowbase.webp"
+                  srcset="
+                    images/projects/flowbase-small.webp  840w,
+                    images/projects/flowbase.webp       1440w
+                  "
+                  sizes="(max-width: 760px) 90vw, 52vw"
+                  alt="FlowBase: a dark project management interface with a Kanban board"
+                  width="1440"
+                  height="848"
+                  loading="lazy"
+                />
+              </div>
+              <span class="visual-open"
+                ><svg class="icon"><use href="#arrow-up-right" /></svg></span
+            ></a>
+            <div class="project-info">
+              <div class="project-title-row">
+                <h3>FlowBase</h3>
+                <a
+                  class="project-live"
+                  href="https://flowbase-xyz.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View project
+                  <svg class="icon"><use href="#arrow-up-right" /></svg
+                ></a>
+              </div>
+              <p>
+                One workspace for the whole team. A full-stack project
+                management platform with Kanban boards, team roles, and
+                subscription billing.
+              </p>
+              <ul class="tags" aria-label="FlowBase technologies">
+                <li>Next.js</li>
+                <li>TypeScript</li>
+                <li>PostgreSQL</li>
+                <li>Stripe</li>
+              </ul>
+              <button
+                class="detail-button"
+                aria-haspopup="dialog"
+                aria-controls="project-dialog"
+                type="button"
+                data-project="flowbase"
+              >
+                Behind the build <span aria-hidden="true">+</span>
+              </button>
+            </div>
+          </article>
+          <article
+            class="project-card project-homebase"
+            data-category="full-stack"
+            id="homebase"
+          >
+            <a
+              class="project-visual visual-homebase"
+              href="https://home-base-project.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit the HomeBase website (opens in a new tab)"
+              ><div class="visual-top">
+                <span>02 / HomeBase</span><span>Platform / Accommodation</span>
+              </div>
+              <div class="project-browser">
+                <div class="project-browser-bar">
+                  <span class="window-dots"><i></i><i></i><i></i></span
+                  ><span>home-base-project.vercel.app</span>
+                </div>
+                <img
+                  src="images/projects/homebase.webp"
+                  srcset="
+                    images/projects/homebase-small.webp  840w,
+                    images/projects/homebase.webp       1440w
+                  "
+                  sizes="(max-width: 760px) 90vw, 42vw"
+                  alt="HomeBase: a refined accommodation platform with the headline Find your perfect space"
+                  width="1440"
+                  height="848"
+                  loading="lazy"
+                />
+              </div>
+              <span class="visual-open"
+                ><svg class="icon"><use href="#arrow-up-right" /></svg></span
+            ></a>
+            <div class="project-info">
+              <div class="project-title-row">
+                <h3>HomeBase</h3>
+                <a
+                  class="project-live"
+                  href="https://home-base-project.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View project
+                  <svg class="icon"><use href="#arrow-up-right" /></svg
+                ></a>
+              </div>
+              <p>
+                Helping people find their next place. An accommodation platform
+                for Nigeria, connecting hosts and renters through listings,
+                bookings, and real-time messaging.
+              </p>
+              <ul class="tags" aria-label="HomeBase technologies">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+                <li>Paystack</li>
+              </ul>
+              <button
+                class="detail-button"
+                aria-haspopup="dialog"
+                aria-controls="project-dialog"
+                type="button"
+                data-project="homebase"
+              >
+                Behind the build <span aria-hidden="true">+</span>
+              </button>
+            </div>
+          </article>
+          <article
+            class="project-card project-mamaput"
+            data-category="frontend"
+            id="mama-put"
+          >
+            <a
+              class="project-visual visual-mamaput"
+              href="https://bigjay67.github.io/mama-put/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit the Mama Put website (opens in a new tab)"
+              ><div class="visual-top">
+                <span>03 / Mama Put</span
+                ><span>Web design / Restaurant concept</span>
+              </div>
+              <div class="project-browser">
+                <div class="project-browser-bar">
+                  <span class="window-dots"><i></i><i></i><i></i></span
+                  ><span>bigjay67.github.io/mama-put</span>
+                </div>
+                <img
+                  src="images/projects/mama-put.webp"
+                  srcset="
+                    images/projects/mama-put-small.webp  840w,
+                    images/projects/mama-put.webp       1440w
+                  "
+                  sizes="(max-width: 760px) 90vw, 52vw"
+                  alt="Mama Put: a bold yellow and orange Nigerian restaurant concept website"
+                  width="1440"
+                  height="848"
+                  loading="lazy"
+                />
+              </div>
+              <span class="visual-open"
+                ><svg class="icon"><use href="#arrow-up-right" /></svg></span
+            ></a>
+            <div class="project-info">
+              <div class="project-title-row">
+                <h3>Mama Put</h3>
+                <a
+                  class="project-live"
+                  href="https://bigjay67.github.io/mama-put/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View project
+                  <svg class="icon"><use href="#arrow-up-right" /></svg
+                ></a>
+              </div>
+              <p>
+                A little Lagos energy on the web. A buka-inspired restaurant
+                concept with expressive typography, local character, and a menu
+                that changes with the day.
+              </p>
+              <ul class="tags" aria-label="Mama Put technologies">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Responsive design</li>
+              </ul>
+              <button
+                class="detail-button"
+                aria-haspopup="dialog"
+                aria-controls="project-dialog"
+                type="button"
+                data-project="mamaput"
+              >
+                Behind the build <span aria-hidden="true">+</span>
+              </button>
+            </div>
+          </article>
+          <article
+            class="project-card project-counter"
+            data-category="frontend"
+            id="passenger-counter"
+          >
+            <a
+              class="project-visual visual-counter"
+              href="https://github.com/BigJay67/passenger-counter"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Passenger Counter on GitHub (opens in a new tab)"
+              ><div class="visual-top">
+                <span>04 / Passenger Counter</span
+                ><span>Early experiment / JavaScript</span>
+              </div>
+              <div class="counter-illustration" aria-hidden="true">
+                <span class="counter-label">SMALL STARTS. REAL PROGRESS.</span
+                ><span class="counter-number">0<span>1</span></span>
+                <div class="counter-controls">
+                  <span>+ Increment</span><span>Save count ↗</span>
+                </div>
+                <span class="counter-note"
+                  >A study in making the small things work.</span
+                >
+              </div>
+              <span class="visual-open"
+                ><svg class="icon"><use href="#arrow-up-right" /></svg></span
+            ></a>
+            <div class="project-info">
+              <div class="project-title-row">
+                <h3>Passenger Counter</h3>
+                <a
+                  class="project-live"
+                  href="https://github.com/BigJay67/passenger-counter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View source
+                  <svg class="icon"><use href="#arrow-up-right" /></svg
+                ></a>
+              </div>
+              <p>
+                Where the building started. A small JavaScript exercise in
+                counting passengers, saving entries, and learning to connect an
+                interface to its logic.
+              </p>
+              <ul class="tags" aria-label="Passenger Counter technologies">
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Vite</li>
+              </ul>
+              <button
+                class="detail-button"
+                aria-haspopup="dialog"
+                aria-controls="project-dialog"
+                type="button"
+                data-project="counter"
+              >
+                Behind the build <span aria-hidden="true">+</span>
+              </button>
+            </div>
+          </article>
+        </div>
+        <a
+          class="github-more"
+          href="https://github.com/BigJay67"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span
+            ><svg class="icon"><use href="#github" /></svg> More code,
+            experiments, and works in progress.</span
+          ><span
+            >Find me on GitHub
+            <svg class="icon"><use href="#arrow-up-right" /></svg></span
+        ></a>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-heading">
+        <div class="container about-layout section-pad">
+          <div class="about-portrait">
+            <div class="portrait-frame">
+              <img
+                src="images/projects/profile.webp"
+                alt="Makinde James"
+                width="600"
+                height="800"
+                loading="lazy"
+              /><span class="portrait-label eyebrow"
+                >The person behind the pixels</span
+              >
+            </div>
+            <div class="portrait-footer">
+              <span>Makinde James</span
+              ><span class="eyebrow">Developer & curious human</span>
+            </div>
+            <svg class="portrait-spark" aria-hidden="true">
+              <use href="#spark" />
+            </svg>
+          </div>
+          <div class="about-copy">
+            <p class="eyebrow section-index">02 / A bit about me</p>
+            <h2 id="about-heading">
+              Good software<br />starts with<br /><span class="serif-word"
+                >giving a damn.</span
+              >
+            </h2>
+            <p class="about-lead">
+              I’m Makinde James, a software developer who cares about how things
+              work and how they feel.
             </p>
-            <p><strong>Tech:</strong> Next.js, TypeScript, PostgreSQL, Drizzle ORM, Clerk, Stripe, Vercel</p>
-            <a href="https://flowbase-xyz.vercel.app" target="_blank" class="btn" style="display:inline-block; margin-top:10px; padding:8px 16px; font-size:0.9rem;">View Live Site</a>
+            <p>
+              I studied Software Engineering at Osun State University. Since
+              then, I’ve been turning that foundation into real projects: from a
+              restaurant website with a distinctly Nigerian voice to full-stack
+              platforms with authentication, payments, and live collaboration.
+            </p>
+            <p>
+              I enjoy the whole process. Understanding the problem. Finding the
+              right structure. Getting the little interactions right. Then
+              making it all work together.
+            </p>
+            <div class="about-facts">
+              <div>
+                <span class="eyebrow">My foundation</span
+                ><span>Software Engineering<br />Osun State University</span>
+              </div>
+              <div>
+                <span class="eyebrow">My sweet spot</span
+                ><span>Frontend craft<br />Full-stack problem solving</span>
+              </div>
+            </div>
+            <a
+              class="text-link"
+              href="https://www.linkedin.com/in/james-makinde-7039a937a"
+              target="_blank"
+              rel="noopener noreferrer"
+              >A little more about me on LinkedIn
+              <svg class="icon"><use href="#arrow-up-right" /></svg
+            ></a>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="section contact-section scroll-animate">
-        <div class="section-title">
-          <h2>Let's Work Together</h2>
-          <p>Have a project in mind? Reach out — I'm open to freelance work and opportunities.</p>
+      <section
+        class="approach-section container section-pad"
+        id="approach"
+        aria-labelledby="approach-heading"
+      >
+        <div class="section-top">
+          <p class="eyebrow section-index">03 / How I work</p>
+          <span class="eyebrow muted">From a rough idea to something real</span>
         </div>
-
-        <div style="text-align: center; margin-bottom: 2rem; line-height: 1.8;">
-          <p><strong>Email:</strong> <a href="mailto:makindejames5@gmail.com">makindejames5@gmail.com</a></p>
-          <p><strong>WhatsApp / Phone:</strong> <a href="https://wa.me/2348127098777">0812 709 8777</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/james-makinde-7039a937a" target="_blank">linkedin.com/in/james-makinde-7039a937a</a></p>
-          <p><strong>Twitter / X:</strong> <a href="https://twitter.com/bigjayonx" target="_blank">@bigjayonx</a></p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/BigJay67" target="_blank">github.com/BigJay67</a></p>
+        <div class="section-heading-row">
+          <h2 id="approach-heading">
+            Built with intention.<br /><span class="serif-word"
+              >Every step of the way.</span
+            >
+          </h2>
+          <p>
+            Good development is more than writing code.<br />Here’s what I bring
+            to the process.
+          </p>
         </div>
-
-        <form id="contactForm" class="contact-form">
-          <input type="text" id="name" placeholder="Your Name" required />
-          <input type="email" id="email" placeholder="Your Email" required />
-          <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-        <p id="formStatus" class="form-status"></p>
+        <div class="approach-grid">
+          <article class="approach-card">
+            <span class="approach-number eyebrow">/ 01</span
+            ><svg
+              class="approach-symbol"
+              viewBox="0 0 64 64"
+              aria-hidden="true"
+            >
+              <circle cx="27" cy="27" r="18" />
+              <path d="m40 40 16 16M19 27h16M27 19v16" />
+            </svg>
+            <h3>Understand first.</h3>
+            <p>
+              Get clear on who it’s for and what it needs to do. The right
+              questions make the rest of the work better.
+            </p>
+          </article>
+          <article class="approach-card">
+            <span class="approach-number eyebrow">/ 02</span
+            ><svg
+              class="approach-symbol"
+              viewBox="0 0 64 64"
+              aria-hidden="true"
+            >
+              <rect x="9" y="9" width="46" height="46" rx="2" />
+              <path d="M9 23h46M26 23v32M16 16h1m5 0h1" />
+            </svg>
+            <h3>Make it feel right.</h3>
+            <p>
+              Clear layouts, thoughtful details, and interfaces that work on a
+              phone just as well as a larger screen.
+            </p>
+          </article>
+          <article class="approach-card">
+            <span class="approach-number eyebrow">/ 03</span
+            ><svg
+              class="approach-symbol"
+              viewBox="0 0 64 64"
+              aria-hidden="true"
+            >
+              <path d="m22 16-16 16 16 16m20-32 16 16-16 16M37 9 27 55" />
+            </svg>
+            <h3>Build it to work.</h3>
+            <p>
+              Choose the tools that fit. Connect the pieces, test the important
+              flows, and keep the code understandable.
+            </p>
+          </article>
+        </div>
       </section>
-      
-      <footer class="footer">
-        <div class="footer-content">
-          <p>© 2025 Makinde James. All rights reserved.</p>
+
+      <section
+        class="contact-section"
+        id="contact"
+        aria-labelledby="contact-heading"
+      >
+        <div class="container contact-content">
+          <div class="contact-top">
+            <p class="eyebrow">
+              <span class="status-dot"></span> Open to projects & opportunities
+            </p>
+            <span class="eyebrow">04 / Your idea goes here</span>
+          </div>
+          <div class="contact-heading-row">
+            <h2 id="contact-heading">
+              Have something<br />in <span class="serif-word">mind?</span>
+            </h2>
+            <a
+              class="contact-orb"
+              href="mailto:makindejames5@gmail.com"
+              aria-label="Email Makinde James"
+              ><svg><use href="#arrow-up-right" /></svg
+            ></a>
+          </div>
+          <div class="contact-bottom">
+            <div>
+              <p>Let’s make something worth putting out there.</p>
+              <a class="email-link" href="mailto:makindejames5@gmail.com"
+                >makindejames5@gmail.com
+                <svg class="icon"><use href="#arrow-up-right" /></svg
+              ></a>
+            </div>
+            <div class="contact-options">
+              <button class="copy-email" type="button">
+                <span class="copy-icon" aria-hidden="true">⧉</span
+                ><span class="copy-label">Copy email</span></button
+              ><a
+                href="https://wa.me/2348127098777"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Say hello on WhatsApp
+                <svg class="icon"><use href="#arrow-up-right" /></svg
+              ></a>
+            </div>
+          </div>
+          <p class="copy-status sr-only" role="status" aria-live="polite"></p>
         </div>
-      </footer>
-
-
-      <script src="script.js"></script>
-    </body>
-  </html>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-layout">
+        <a class="footer-name" href="#home">Makinde James<span>✳</span></a>
+        <p>© <span id="year">2026</span> · Made with intention.</p>
+        <div class="social-links">
+          <a
+            href="https://github.com/BigJay67"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub ↗</a
+          ><a
+            href="https://www.linkedin.com/in/james-makinde-7039a937a"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn ↗</a
+          ><a
+            href="https://twitter.com/bigjayonx"
+            target="_blank"
+            rel="noopener noreferrer"
+            >X ↗</a
+          >
+        </div>
+        <a class="back-top" href="#home" aria-label="Back to top">↑</a>
+      </div>
+    </footer>
+    <dialog
+      class="project-dialog"
+      id="project-dialog"
+      aria-labelledby="dialog-title"
+    >
+      <div class="dialog-content">
+        <div class="dialog-top">
+          <span class="eyebrow" id="dialog-category"></span
+          ><button
+            class="dialog-close"
+            type="button"
+            aria-label="Close project details"
+          >
+            ×
+          </button>
+        </div>
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-intro"></p>
+        <div class="dialog-section">
+          <h3>What’s inside</h3>
+          <ul id="dialog-features"></ul>
+        </div>
+        <div class="dialog-section">
+          <h3>Built with</h3>
+          <ul class="tags" id="dialog-stack"></ul>
+        </div>
+        <div class="dialog-links" id="dialog-links"></div>
+      </div>
+    </dialog>
+  </body>
+</html>
